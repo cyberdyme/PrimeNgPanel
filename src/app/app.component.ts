@@ -12,11 +12,12 @@ export class AppComponent {
 
   constructor(public dialogService: DialogService) {
   }
-  
+
   show() {
     const ref = this.dialogService.open(CarsListDemoComponent, {
         header: 'Choose a Car',
-        width: '70%'
+        width: '70%',
+        height: '500px'
     });
   }
 }

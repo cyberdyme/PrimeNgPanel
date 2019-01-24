@@ -1,43 +1,79 @@
-<div style="display: flex; flex: row">
-  <div style="flex-basis: 200px; height: 100%">
-    <p-panel>
-      <p-header>
-        <div class="ui-helper-clearfix">
-          <span class="ui-panel-title" style="font-size:16px;display:inline-block;margin-top:2px">Custom Header</span>
-          <p-splitButton [style]="{'float':'right'}" label="Save" icon="pi pi-check" (onClick)="save()" [model]="items"></p-splitButton>
-        </div>
-      </p-header>
-      The story begins as Don Vito Corleone, the head of a New York Mafia family, oversees his daughter's wedding.
-      His beloved son Michael has just come home from the war, but does not intend to become part of his father's
-      business.
-      Through Michael's life the nature of the family business becomes clear. The business of the family is just like
-      the
-      head of the family,
-      kind and benevolent to those who give respect, but given to ruthless violence whenever anything stands against
-      the
-      good of the family.
-      <p-footer>
-        <button pButton type="button" icon="pi pi-plus" label="New" class="ui-button-info" style="margin-right: .25em"></button>
-        <button pButton type="button" icon="pi pi-search" label="View" class="ui-button-success"></button>
-      </p-footer>
-    </p-panel>
-  </div>
+<div fxLayout="row" fxFlex="0 1 auto" fxLayoutGap="8px">
 
-  <div style="flex: 1 1 auto; background-color: pink;align-items: flex-end;">
-    <p-panel style="display:flex;">
-      <p-header>        
-        <div class="ui-helper-clearfix">
-          <span class="ui-panel-title" style="font-size:16px;display:inline-block;margin-top:2px">Custom Header</span>
-          <p-splitButton [style]="{'float':'right'}" label="Save" icon="pi pi-check" (onClick)="save()" [model]="items"></p-splitButton>
+  <div fxLayout="column" fxLayoutGap="8px" style="height: 100%; background-color: yellow">
+    <app-custom-panel>
+      <ng-container appCustomHeader>
+        <div fxLayout="row" fxLayoutAlign="space-between center">
+          <span>Key Details</span>
+          <!-- <p-splitButton label="Save" icon="pi pi-check" (onClick)="save()" [model]="items"></p-splitButton> 
+                        -->
         </div>
-      </p-header>
-      <div style="flex-basis: 50%; ">
+      </ng-container>
+      <ng-container appCustomContent>
         The story begins as Don Vito Corleone
-      </div>
-      <p-footer>
-        <button pButton type="button" icon="pi pi-plus" label="New" class="ui-button-info" style="margin-right: .25em"></button>
-        <button pButton type="button" icon="pi pi-search" label="View" class="ui-button-success"></button>
-      </p-footer>
-    </p-panel>
+      </ng-container>
+      <ng-container appCustomFooter>
+        The story begins as Don Vito Corleone
+      </ng-container>
+    </app-custom-panel>
+    <app-custom-panel style="height: 100%;" fxLayout="stretch">
+      <ng-container appCustomHeader>
+        <div fxLayout="row" fxLayoutAlign="space-between center">
+          <span>Billing Details</span>
+          <!-- <p-splitButton label="Save" icon="pi pi-check" (onClick)="save()" [model]="items"></p-splitButton> 
+                          -->
+        </div>
+      </ng-container>
+      <ng-container appCustomContent>
+        The story begins as Don Vito Corleone
+        The story begins as Don Vito Corleone
+        The story begins as Don Vito Corleone
+        The story begins as Don Vito Corleone
+        The story begins as Don Vito Corleone
+        The story begins as Don Vito Corleone
+      </ng-container>
+      <ng-container appCustomFooter>
+      </ng-container>
+    </app-custom-panel>
   </div>
+  <app-custom-panel style="height: 100%;" fxLayout="stretch">
+    <ng-container appCustomHeader>
+      <div fxLayout="row" fxLayoutAlign="space-between center">
+        <span>Custom Header</span>
+        <!-- <p-splitButton label="Save" icon="pi pi-check" (onClick)="save()" [model]="items"></p-splitButton> 
+                      -->
+      </div>
+    </ng-container>
+    <ng-container appCustomContent>
+      The story begins as Don Vito Corleone
+      The story begins as Don Vito Corleone
+      The story begins as Don Vito Corleone
+      The story begins as Don Vito Corleone
+      The story begins as Don Vito Corleone
+      The story begins as Don Vito Corleone
+    </ng-container>
+    <ng-container appCustomFooter>
+      The story begins as Don Vito Corleone
+    </ng-container>
+  </app-custom-panel>
+  <app-custom-panel fxFlex="1 1 auto">
+    <ng-container appCustomHeader>
+      <div fxLayout="row" fxLayoutAlign="space-between center">
+        <span>Custom Header</span>
+        <!-- <p-splitButton label="Save" icon="pi pi-check" (onClick)="save()" [model]="items"></p-splitButton> 
+                        -->
+      </div>
+    </ng-container>
+    <ng-container appCustomContent>
+      The story begins as Don Vito Corleone
+      The story begins as Don Vito Corleone
+      The story begins as Don Vito Corleone
+      The story begins as Don Vito Corleone
+      The story begins as Don Vito Corleone
+      The story begins as Don Vito Corleone
+    </ng-container>
+    <ng-container appCustomFooter>
+      The story begins as Don Vito Corleone
+    </ng-container>
+  </app-custom-panel>
 </div>

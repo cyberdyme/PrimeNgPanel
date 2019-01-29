@@ -1,17 +1,18 @@
-<div fxLayout="column" fxLayout="flex-start stretch" class="im-panel">
+<div fxFill fxLayout="column" class="im-panel">
   <!-- Header -->
-  <div class="im-panel-titlebar" fxLayout="flex-start">
+  <div fxFlex="initial" class="im-panel-titlebar" fxLayout="flex-start">
       <ng-content select="[appCustomHeader]">        
       </ng-content>
   </div>
 
-  <div class="im-panel-content" style="background-color:lightcyan; min-height: calc(100% - 64px)">
+  <div class="im-panel-content" 
+    style="background-color:lightcyan; overflow: auto; height: calc(100% - 60px); overflow: auto;">
     <!-- content-->
     <ng-content select="[appCustomContent]">    
     </ng-content>  
   </div>
 
-  <div class="im-panel-footer" fxLayout="flex-end">
+  <div fxFlex="initial" fxLayout="flex-end" class="im-panel-footer ">
       <!-- content-->
       <ng-content select="[appCustomFooter]">    
       </ng-content>  

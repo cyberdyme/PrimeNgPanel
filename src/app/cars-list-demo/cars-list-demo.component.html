@@ -1,6 +1,6 @@
-<div fxLayout="row" fxFlex="0 1 auto" fxLayoutGap="8px">
+<div fxLayout="row" fxLayoutGap="8px" style="overflow: auto;">
 
-  <div fxLayout="column" fxLayoutGap="8px" style="height: 100%; background-color: yellow">
+  <div fxLayout="column" fxLayoutGap="8px" style="height:440px; background-color: yellow">
     <app-custom-panel>
       <ng-container appCustomHeader>
         <div fxLayout="row" fxLayoutAlign="space-between center">
@@ -11,12 +11,15 @@
       </ng-container>
       <ng-container appCustomContent>
         The story begins as Don Vito Corleone
+        The story begins as Don Vito Corleone
+        The story begins as Don Vito Corleone
+        The story begins as Don Vito Corleone
       </ng-container>
       <ng-container appCustomFooter>
         The story begins as Don Vito Corleone
       </ng-container>
     </app-custom-panel>
-    <app-custom-panel style="height: 100%;" fxLayout="stretch">
+    <app-custom-panel fxFlex>
       <ng-container appCustomHeader>
         <div fxLayout="row" fxLayoutAlign="space-between center">
           <span>Billing Details</span>
@@ -36,9 +39,9 @@
       </ng-container>
     </app-custom-panel>
   </div>
-  <app-custom-panel style="height: 100%;" fxLayout="stretch">
+  <app-custom-panel>
     <ng-container appCustomHeader>
-      <div fxLayout="row" fxLayoutAlign="space-between center">
+      <div>
         <span>Custom Header</span>
         <!-- <p-splitButton label="Save" icon="pi pi-check" (onClick)="save()" [model]="items"></p-splitButton> 
                       -->
@@ -56,9 +59,9 @@
       The story begins as Don Vito Corleone
     </ng-container>
   </app-custom-panel>
-  <app-custom-panel fxFlex="1 1 auto">
+  <app-custom-panel style="height:440px; background-color: lightskyblue">
     <ng-container appCustomHeader>
-      <div fxLayout="row" fxLayoutAlign="space-between center">
+      <div>
         <span>Custom Header</span>
         <!-- <p-splitButton label="Save" icon="pi pi-check" (onClick)="save()" [model]="items"></p-splitButton> 
                         -->

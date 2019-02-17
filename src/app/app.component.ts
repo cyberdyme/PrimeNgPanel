@@ -10,17 +10,22 @@ import { style } from '@angular/animations';
 })
 export class AppComponent {
   title = 'PrimeNgPanel';
+  display = false;
 
   constructor(public dialogService: DialogService) {
+  }
+
+  showDialog() {
+      this.display = true;
   }
 
   show() {
     const ref = this.dialogService.open(CarsListDemoComponent, {
         header: 'Choose a Car',
         width: '70%',
-        height: '500px',    
-        contentStyle: {"overflow": "auto"},
-        styleClass: 'dialog-filters'        
+        height: '500px',
+        contentStyle: {'overflow': 'auto'},
+        styleClass: 'dialog-filters'
     });
   }
 }

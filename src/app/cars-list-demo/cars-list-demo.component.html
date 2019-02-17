@@ -1,6 +1,6 @@
-<div fxLayout="row" fxLayoutGap="8px" style="overflow: auto;">
+<div fxLayout="row" fxFill fxLayoutGap="8px" style="overflow: auto;">
 
-  <div fxLayout="column" fxLayoutGap="8px" style="height:440px; background-color: yellow">
+  <div fxLayout="column" fxLayoutGap="8px" style="background-color: yellow">
     <app-custom-panel>
       <ng-container appCustomHeader>
         <div fxLayout="row" fxLayoutAlign="space-between center">
@@ -48,18 +48,32 @@
       </div>
     </ng-container>
     <ng-container appCustomContent>
-      The story begins as Don Vito Corleone
-      The story begins as Don Vito Corleone
-      The story begins as Don Vito Corleone
-      The story begins as Don Vito Corleone
-      The story begins as Don Vito Corleone
-      The story begins as Don Vito Corleone
+      <div>
+        <div fxLayout="row">
+          <label>Customer:</label>
+          <p-autoComplete 
+            [(ngModel)]="customer" 
+            [suggestions]="filteredCustomers" 
+            (completeMethod)="queryCustomers($event)"
+            dropdown="true"
+            [minLength]="1" placeholder="customers" 
+            field="fullName">
+            <ng-template let-customer pTemplate="item">
+              {{customer?.fullName}}
+            </ng-template>
+            <ng-template let-customer pTemplate="selectedItem">
+              {{customer | json}
+            </ng-template>
+          </p-autoComplete>
+        </div>
+        {{customer | json}}
+      </div>
     </ng-container>
     <ng-container appCustomFooter>
       The story begins as Don Vito Corleone
     </ng-container>
   </app-custom-panel>
-  <app-custom-panel style="height:440px; background-color: lightskyblue">
+  <app-custom-panel style="background-color: lightskyblue">
     <ng-container appCustomHeader>
       <div>
         <span>Custom Header</span>
@@ -78,7 +92,7 @@
       <p>Two</p>
       Three
       Four
-      Five 
+      Five
       Six
       <p>One</p>
       <p>Two</p>

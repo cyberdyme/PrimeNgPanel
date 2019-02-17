@@ -3,8 +3,15 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
 
-import { AccordionModule, DialogService, SplitButtonModule } from 'primeng/primeng';
+import {
+  AccordionModule,
+  DialogService,
+  SplitButtonModule,
+  DialogModule,
+  AutoCompleteModule
+} from 'primeng/primeng';
 import { PanelModule } from 'primeng/primeng';
 import { ButtonModule } from 'primeng/primeng';
 import { RadioButtonModule } from 'primeng/primeng';
@@ -17,6 +24,7 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import { CustomHeaderDirective } from './component/custom-panel/custom-header.directive';
 import { CustomContentDirective } from './component/custom-panel/custom-content.directive';
 import { CustomFooterDirective } from './component/custom-panel/custom-footer.directive';
+import { GenerateNamesService } from './services/generate-names.service';
 
 @NgModule({
   declarations: [
@@ -38,9 +46,12 @@ import { CustomFooterDirective } from './component/custom-panel/custom-footer.di
     RadioButtonModule,
     SplitButtonModule,
     DynamicDialogModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    DialogModule,
+    AutoCompleteModule,
+    HttpClientModule
   ],
-  providers: [DialogService],
+  providers: [DialogService, GenerateNamesService],
   bootstrap: [AppComponent],
   entryComponents: [CarsListDemoComponent]
 })

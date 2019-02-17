@@ -33,3 +33,10 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ng new PrimeNgPanel --directory ./
 
 npm install primeng font-awesome
+
+
+====================
+
+https://github.com/typicode/json-server
+npm install -g json-server
+json-server --watch db.json

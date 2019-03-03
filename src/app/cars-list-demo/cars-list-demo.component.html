@@ -1,7 +1,8 @@
-<div fxLayout="row" fxFill fxLayoutGap="8px" style="overflow: auto;">
+<div fxLayout="row" fxFill fxLayoutGap="8px" 
+  style="overflow: auto; width: 100%">
 
   <div fxLayout="column" fxLayoutGap="8px" style="background-color: yellow">
-    <app-custom-panel>
+    <app-custom-panel style="width:200px">
       <ng-container appCustomHeader>
         <div fxLayout="row" fxLayoutAlign="space-between center">
           <span>Key Details</span>
@@ -19,7 +20,7 @@
         The story begins as Don Vito Corleone
       </ng-container>
     </app-custom-panel>
-    <app-custom-panel fxFlex>
+    <app-custom-panel fxFlex style="width:200px">
       <ng-container appCustomHeader>
         <div fxLayout="row" fxLayoutAlign="space-between center">
           <span>Billing Details</span>
@@ -73,7 +74,9 @@
       The story begins as Don Vito Corleone
     </ng-container>
   </app-custom-panel>
-  <app-custom-panel style="background-color: lightskyblue">
+  <app-custom-panel 
+    backgroundColour="gray"
+    style="width: 100%">
     <ng-container appCustomHeader>
       <div>
         <span>Custom Header</span>
@@ -82,29 +85,7 @@
       </div>
     </ng-container>
     <ng-container appCustomContent>
-      The story begins as Don Vito Corleone
-      The story begins as Don Vito Corleone
-      The story begins as Don Vito Corleone
-      The story begins as Don Vito Corleone
-      The story begins as Don Vito Corleone
-      The story begins as Don Vito Corleone
-      <p>One</p>
-      <p>Two</p>
-      Three
-      Four
-      Five
-      Six
-      <p>One</p>
-      <p>Two</p>
-      Seven
-      Eight
-      <p>One</p>
-      <p>Two</p>
-      Nine
-      Ten
-      The story begins as Don Vito Corleone
-      The story begins as Don Vito Corleone
-      The story begins as Don Vito Corleone
+      <app-car-input-form></app-car-input-form>
     </ng-container>
     <ng-container appCustomFooter>
       The story begins as Don Vito Corleone

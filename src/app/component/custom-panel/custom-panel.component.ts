@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-custom-panel',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./custom-panel.component.scss']
 })
 export class CustomPanelComponent implements OnInit {
-
+  @Input() backgroundColour: string;
   constructor() { }
 
   ngOnInit() {

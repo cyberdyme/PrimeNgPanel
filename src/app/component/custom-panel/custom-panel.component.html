@@ -6,8 +6,10 @@
   </div>
 
   <div class="im-panel-content" 
-    style="background-color:lightcyan; overflow: auto; height: calc(100% - 60px); overflow: auto;">
+    [style.background]="backgroundColour"
+    style="height: calc(100% - 60px); overflow: auto;">
     <!-- content-->
+    {{backgroundColour}}
     <ng-content select="[appCustomContent]">    
     </ng-content>  
   </div>

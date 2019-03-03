@@ -16,7 +16,7 @@ import { PanelModule } from 'primeng/primeng';
 import { ButtonModule } from 'primeng/primeng';
 import { RadioButtonModule } from 'primeng/primeng';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DynamicDialogModule } from 'primeng/components/dynamicdialog/dynamicdialog';
 import { CarsListDemoComponent } from './cars-list-demo/cars-list-demo.component';
 import { CustomPanelComponent } from './component/custom-panel/custom-panel.component';
@@ -25,6 +25,7 @@ import { CustomHeaderDirective } from './component/custom-panel/custom-header.di
 import { CustomContentDirective } from './component/custom-panel/custom-content.directive';
 import { CustomFooterDirective } from './component/custom-panel/custom-footer.directive';
 import { GenerateNamesService } from './services/generate-names.service';
+import { CarInputFormComponent } from './cars-list-demo/car-input-form.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { GenerateNamesService } from './services/generate-names.service';
     CustomPanelComponent,
     CustomHeaderDirective,
     CustomContentDirective,
-    CustomFooterDirective
+    CustomFooterDirective,
+    CarInputFormComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +51,8 @@ import { GenerateNamesService } from './services/generate-names.service';
     FlexLayoutModule,
     DialogModule,
     AutoCompleteModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [DialogService, GenerateNamesService],
   bootstrap: [AppComponent],
